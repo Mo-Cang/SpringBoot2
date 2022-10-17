@@ -8,6 +8,7 @@ class SpringbootRedisApplicationTests {
 
     @Test
     void contextLoads() {
+        System.out.println();
     }
 
 }
