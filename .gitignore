@@ -10,7 +10,6 @@ target/
 *.iws
 *.iml
 *.ipr
-src
 
 # Log file
 *.log
