@@ -16,7 +16,7 @@ class SpringbootRedisApplicationTests {
     @Test
     void set() {
         ValueOperations ops = redisTemplate.opsForValue();
-        ops.set("age",16);
+        ops.set("age",165);
     }
 
     @Test
