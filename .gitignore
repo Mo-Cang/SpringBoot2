@@ -1,5 +1,16 @@
 # Compiled class file
+.git
+logs
+rebel.xml
+target/
 *.class
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+src
 
 # Log file
 *.log
