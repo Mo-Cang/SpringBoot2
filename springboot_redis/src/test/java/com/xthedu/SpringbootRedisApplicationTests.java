@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.core.ValueOperations;
 
 @SpringBootTest
@@ -12,6 +13,9 @@ class SpringbootRedisApplicationTests {
 
     @Autowired
     private RedisTemplate redisTemplate;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     @Test
     void set() {
@@ -37,6 +41,13 @@ class SpringbootRedisApplicationTests {
         HashOperations ops = redisTemplate.opsForHash();
         Object val = ops.get("keya", "a");
         System.out.println(val);
+    }
+
+    @Test
+    void stringGet() {
+        ValueOperations<String, String> ops = stringRedisTemplate.opsForValue();
+        Object name = ops.get("name");
+        System.out.println(name);
     }
 
 }
