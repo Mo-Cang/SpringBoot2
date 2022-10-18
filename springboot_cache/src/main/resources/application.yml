@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    password: 20000323
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/student
+
